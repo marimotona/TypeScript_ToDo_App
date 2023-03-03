@@ -1,38 +1,141 @@
 .App {
   text-align: center;
+  font-weight: bold;
+  font-size: 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(59, 88, 118);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputForm {
+  width: 80vh;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.inputForm input {
+  width: 15rem;
+  height: 1.7rem;
+  padding: 0.5rem;
+  margin-top: 40px;
+  border: none;
+  border-radius: 4px;
+}
+
+
+
+.btn-square-pop {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  margin-left: 10px;
+  height: 35px;
+}
+
+.btn-square-pop:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.todoList {
+  width: 100vw;
+  margin: 2rem auto;
+}
+
+.todo {
+  margin: 0.4rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.icons .fa-check {
+  /* padding: 0.487rem .5rem;
+  font-size: 20px;
+  color: rgb(39, 126, 17); */
+
+  display: inline-block;
+  text-decoration: none;
+  background: rgb(95, 216, 65);
+  color: #FFF;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #4d606e;
+  transition: .4s;
+  margin-left: 10px;
+}
+
+.icons .fa-check:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.icons .fa-trash {
+  /* padding: 0.487rem .5rem;
+  font-size: 20px;
+  color: rgba(179, 44, 55, 0.95); */
+
+  display: inline-block;
+  text-decoration: none;
+  background: rgba(220, 94, 104, 0.95);
+  color: #FFF;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #4d606e;
+  transition: .4s;
+}
+
+
+.todoText {
+  height: 30px;
+  width: 200px;
+  padding: 0.3rem 4rem;
+  position: center;
+  background: white;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+
+button {
+  border: none;
+  align-items: center;
+  background-color: transparent;
 }
