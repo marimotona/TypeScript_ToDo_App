@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  
+  const [inputValue, setInputValue] = useState("");
 
   const [todos, setTodos] = useState<Todo[]>([]);
 
@@ -11,11 +13,19 @@ function App() {
     checked: boolean;
   };
 
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value);
+  }
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="App">
       <header>TypeScript ToDo</header>
-      <form>
-        <input type="text" onChange={() => {}} className="inputText" />
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input type="text" onChange={(e) => handleChange(e)} className="inputText" />
         <input type="submit" value="Button" className="changeButton" />
       </form>
     </div>
