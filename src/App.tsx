@@ -61,10 +61,14 @@ function App() {
   return (
     <div className="App">
       <header>TypeScript ToDo</header>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" onChange={(e) => handleChange(e)} className="inputText" />
-        <input type="submit" value="Button" className="btn-square-pop" />
-      </form>
+      <div className='inputForm'>
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input type="text" onChange={(e) => handleChange(e)} className="inputText" />
+          <button type="submit" className="btn-square-pop">
+            BUTTON
+          </button>
+        </form>
+      </div>
       <div className='todoList'>
         {todos.map((todo) => (
           <div className='todo'>
