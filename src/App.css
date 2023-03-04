@@ -18,6 +18,7 @@ header {
   margin: 0 auto;
   text-align: center;
   position: relative;
+  padding-bottom: 20px;
 }
 
 .inputForm input {
@@ -53,20 +54,19 @@ header {
 
 .todoList {
   width: 100vw;
-  margin: 2rem auto;
 }
 
-.todo {
-  margin: 0.4rem;
+.textEdit {
+  display: flex;
+  padding-left: 180px;
+  padding-top: 10px;
+}
+
+.todos {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-}
-
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
 }
 
 .icons .fa-trash {
@@ -91,10 +91,6 @@ header {
   transition: .4s;
 }
 
-.todoText p input {
-  padding: 7px;
-}
-
 .todoText {
   height: 30px;
   width: 200px;
@@ -105,6 +101,15 @@ header {
   font-size: 20px;
 }
 
+.inputText {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  background-color: #ffffff;
+  font-weight: bold;
+  
+}
 
 
 button {

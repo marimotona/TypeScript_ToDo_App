@@ -71,14 +71,16 @@ function App() {
       </div>
       <div className='todoList'>
         {todos.map((todo) => (
-          <div className='todo'>
+          <div className='todos'>
             <p key={todo.id} className="todoText">
               <input type="text" onChange={(e) => handleEdit(todo.id, e.target.value)} value={todo.inputValue} disabled={todo.checked} className="inputText"/>
-              <input type="checkbox" onChange={(e) => handleChecked(todo.id, todo.checked)} />
-              <div className='icons'>
-                <button onClick={(e) => handleDelete(todo.id)}>
-                  <i className="fa-solid fa-trash"></i>
-                </button>
+              <div className='textEdit'>
+                <input type="checkbox" onChange={(e) => handleChecked(todo.id, todo.checked)} />
+                <div className='icons'>
+                  <button onClick={(e) => handleDelete(todo.id)}>
+                    <i className="fa-solid fa-trash"></i>
+                  </button>
+                </div>
               </div>
             </p>
           </div>
