@@ -122,6 +122,9 @@ header {
   transition: .4s;
 }
 
+.todoText p input {
+  padding: 7px;
+}
 
 .todoText {
   height: 30px;

@@ -53,6 +53,11 @@ function App() {
 
   }
 
+  const handleDelete = (id: number) => {
+    const newTodos = setTodos(todos.filter((todo) => todo.id !== id));
+    return newTodos;
+  }
+
   return (
     <div className="App">
       <header>TypeScript ToDo</header>
@@ -66,7 +71,11 @@ function App() {
             <p key={todo.id} className="todoText">
               <input type="text" onChange={(e) => handleEdit(todo.id, e.target.value)} value={todo.inputValue} disabled={todo.checked} className="inputText"/>
               <input type="checkbox" onChange={(e) => handleChecked(todo.id, todo.checked)} />
-              
+              <div className='icons'>
+                <button onClick={(e) => handleDelete(todo.id)}>
+                  <i className="fa-solid fa-trash"></i>
+                </button>
+              </div>
             </p>
           </div>
         ))}
