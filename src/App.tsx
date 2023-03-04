@@ -41,6 +41,18 @@ function App() {
     setTodos(newTodos);
   }
 
+  const handleChecked = (id: number, checked: boolean) => {
+    const newTodos = todos.map((todo) => {
+      if(todo.id === id) {
+        todo.checked = !checked;
+      }
+      return todo;
+    });
+
+    setTodos(newTodos);
+
+  }
+
   return (
     <div className="App">
       <header>TypeScript ToDo</header>
@@ -52,7 +64,9 @@ function App() {
         {todos.map((todo) => (
           <div className='todo'>
             <p key={todo.id} className="todoText">
-              <input type="text" onChange={(e) => handleEdit(todo.id, e.target.value)} value={todo.inputValue} className="inputText"/>
+              <input type="text" onChange={(e) => handleEdit(todo.id, e.target.value)} value={todo.inputValue} disabled={todo.checked} className="inputText"/>
+              <input type="checkbox" onChange={(e) => handleChecked(todo.id, todo.checked)} />
+              
             </p>
           </div>
         ))}
